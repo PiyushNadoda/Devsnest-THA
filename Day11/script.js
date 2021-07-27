@@ -8,7 +8,7 @@ class QuizeApp{
             answer:3
         },{
             question:"I love ?",
-            options:["pakistan","sri-lanka","inida","gaziyabad"],
+            options:["pakistan","sri-lanka","india","gaziyabad"],
             answer:2
         },{
             question:"what color is a apple?",
