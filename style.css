@@ -193,92 +193,7 @@ width: 800px;
 .div30 { grid-area: 6 / 5 / 7 / 6; }
 /*# sourceMappingURL=style.css.map */
 
-@media screen and (max-width:800px) and (min-width:450px) {
-  .parent {
-    display: grid;
-    grid-template-columns: repeat(3, 150px);
-    grid-template-rows: repeat(10, 100px);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 450px;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
-    .div3 { grid-area: 1 / 3 / 2 / 4; }
-    .div4 { grid-area: 2 / 1 / 3 / 2; }
-    .div5 { grid-area: 2 / 2 / 3 / 3; }
-    .div6 { grid-area: 2 / 3 / 3 / 4; }
-    .div7 { grid-area: 3 / 1 / 4 / 2; }
-    .div8 { grid-area: 3 / 2 / 4 / 3; }
-    .div9 { grid-area: 3 / 3 / 4 / 4; }
-    .div10 { grid-area: 4 / 1 / 5 / 2; }
-    .div11 { grid-area: 4 / 2 / 5 / 3; }
-    .div12 { grid-area: 4 / 3 / 5 / 4; }
-    .div13 { grid-area: 5 / 1 / 6 / 2; }
-    .div14 { grid-area: 5 / 2 / 6 / 3; }
-    .div15 { grid-area: 5 / 3 / 6 / 4; }
-    .div16 { grid-area: 6 / 1 / 7 / 2; }
-    .div17 { grid-area: 6 / 2 / 7 / 3; }
-    .div18 { grid-area: 6 / 3 / 7 / 4; }
-    .div19 { grid-area: 7 / 1 / 8 / 2; }
-    .div20 { grid-area: 7 / 2 / 8 / 3; }
-    .div21 { grid-area: 7 / 3 / 8 / 4; }
-    .div22 { grid-area: 8 / 1 / 9 / 2; }
-    .div23 { grid-area: 8 / 2 / 9 / 3; }
-    .div24 { grid-area: 8 / 3 / 9 / 4; }
-    .div25 { grid-area: 9 / 1 / 10 / 2; }
-    .div26 { grid-area: 9 / 2 / 10 / 3; }
-    .div27 { grid-area: 9 / 3 / 10 / 4; }
-    .div28 { grid-area: 10 / 1 / 11 / 2; }
-    .div29 { grid-area: 10 / 2 / 11 / 3; }
-    .div30 { grid-area: 10 / 3 / 11 / 4; }
-}
 
-@media screen and (max-width:450px) {
-
-
-
-  .parent {
-    display: grid;
-    grid-template-columns: repeat(2, 120px);
-    grid-template-rows: repeat(15, 150px);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 250px;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
-    .div3 { grid-area: 2 / 1 / 3 / 2; }
-    .div4 { grid-area: 2 / 2 / 3 / 3; }
-    .div5 { grid-area: 3 / 1 / 4 / 2; }
-    .div6 { grid-area: 3 / 2 / 4 / 3; }
-    .div7 { grid-area: 4 / 1 / 5 / 2; }
-    .div8 { grid-area: 4 / 2 / 5 / 3; }
-    .div9 { grid-area: 5 / 1 / 6 / 2; }
-    .div10 { grid-area: 5 / 2 / 6 / 3; }
-    .div11 { grid-area: 6 / 1 / 7 / 2; }
-    .div12 { grid-area: 6 / 2 / 7 / 3; }
-    .div13 { grid-area: 7 / 1 / 8 / 2; }
-    .div14 { grid-area: 7 / 2 / 8 / 3; }
-    .div15 { grid-area: 8 / 1 / 9 / 2; }
-    .div16 { grid-area: 8 / 2 / 9 / 3; }
-    .div17 { grid-area: 9 / 1 / 10 / 2; }
-    .div18 { grid-area: 9 / 2 / 10 / 3; }
-    .div19 { grid-area: 10 / 1 / 11 / 2; }
-    .div20 { grid-area: 10 / 2 / 11 / 3; }
-    .div21 { grid-area: 11 / 1 / 12 / 2; }
-    .div22 { grid-area: 11 / 2 / 12 / 3; }
-    .div23 { grid-area: 12 / 1 / 13 / 2; }
-    .div24 { grid-area: 12 / 2 / 13 / 3; }
-    .div25 { grid-area: 13 / 1 / 14 / 2; }
-    .div26 { grid-area: 13 / 2 / 14 / 3; }
-    .div27 { grid-area: 14 / 1 / 15 / 2; }
-    .div28 { grid-area: 14 / 2 / 15 / 3; }
-    .div29 { grid-area: 15 / 1 / 16 / 2; }
-    .div30 { grid-area: 15 / 2 / 16 / 3; }
-}
 
 @-webkit-keyframes rainbow {
   0%{background-position:0% 82%}
@@ -333,4 +248,140 @@ width: 800px;
 
 .div26 .bubbly-button, .div27 .bubbly-button, .div28 .bubbly-button, .div29 .bubbly-button, .div30 .bubbly-button{
   animation-duration: 2s;
+}
+
+@media screen and (max-width:800px) and (min-width:450px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(10, 100px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 450px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 1 / 3 / 2 / 4; }
+    .div4 { grid-area: 2 / 1 / 3 / 2; }
+    .div5 { grid-area: 2 / 2 / 3 / 3; }
+    .div6 { grid-area: 2 / 3 / 3 / 4; }
+    .div7 { grid-area: 3 / 1 / 4 / 2; }
+    .div8 { grid-area: 3 / 2 / 4 / 3; }
+    .div9 { grid-area: 3 / 3 / 4 / 4; }
+    .div10 { grid-area: 4 / 1 / 5 / 2; }
+    .div11 { grid-area: 4 / 2 / 5 / 3; }
+    .div12 { grid-area: 4 / 3 / 5 / 4; }
+    .div13 { grid-area: 5 / 1 / 6 / 2; }
+    .div14 { grid-area: 5 / 2 / 6 / 3; }
+    .div15 { grid-area: 5 / 3 / 6 / 4; }
+    .div16 { grid-area: 6 / 1 / 7 / 2; }
+    .div17 { grid-area: 6 / 2 / 7 / 3; }
+    .div18 { grid-area: 6 / 3 / 7 / 4; }
+    .div19 { grid-area: 7 / 1 / 8 / 2; }
+    .div20 { grid-area: 7 / 2 / 8 / 3; }
+    .div21 { grid-area: 7 / 3 / 8 / 4; }
+    .div22 { grid-area: 8 / 1 / 9 / 2; }
+    .div23 { grid-area: 8 / 2 / 9 / 3; }
+    .div24 { grid-area: 8 / 3 / 9 / 4; }
+    .div25 { grid-area: 9 / 1 / 10 / 2; }
+    .div26 { grid-area: 9 / 2 / 10 / 3; }
+    .div27 { grid-area: 9 / 3 / 10 / 4; }
+    .div28 { grid-area: 10 / 1 / 11 / 2; }
+    .div29 { grid-area: 10 / 2 / 11 / 3; }
+    .div30 { grid-area: 10 / 3 / 11 / 4; }
+
+    .div1 .bubbly-button, .div2 .bubbly-button, .div3 .bubbly-button, .div4 .bubbly-button, .div5 .bubbly-button{
+      animation-duration: 2s;
+    }
+    
+    .div6 .bubbly-button, .div7 .bubbly-button, .div8 .bubbly-button, .div9 .bubbly-button, .div10 .bubbly-button{
+      animation-duration: 2s;
+    }
+    
+    .div11 .bubbly-button, .div12 .bubbly-button, .div13 .bubbly-button, .div14 .bubbly-button, .div15 .bubbly-button{
+      animation-duration: 2s;
+    }
+    
+    .div16 .bubbly-button, .div17 .bubbly-button, .div18 .bubbly-button, .div19 .bubbly-button, .div20 .bubbly-button{
+      animation-duration: 2s;
+    }
+    
+    .div21 .bubbly-button, .div22 .bubbly-button, .div23 .bubbly-button, .div24 .bubbly-button, .div25 .bubbly-button{
+      animation-duration: 2s;
+    }
+    
+    .div26 .bubbly-button, .div27 .bubbly-button, .div28 .bubbly-button, .div29 .bubbly-button, .div30 .bubbly-button{
+      animation-duration: 2s;
+    }
+    
+}
+
+@media screen and (max-width:450px) {
+
+
+
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    grid-template-rows: repeat(15, 150px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 250px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 2 / 1 / 3 / 2; }
+    .div4 { grid-area: 2 / 2 / 3 / 3; }
+    .div5 { grid-area: 3 / 1 / 4 / 2; }
+    .div6 { grid-area: 3 / 2 / 4 / 3; }
+    .div7 { grid-area: 4 / 1 / 5 / 2; }
+    .div8 { grid-area: 4 / 2 / 5 / 3; }
+    .div9 { grid-area: 5 / 1 / 6 / 2; }
+    .div10 { grid-area: 5 / 2 / 6 / 3; }
+    .div11 { grid-area: 6 / 1 / 7 / 2; }
+    .div12 { grid-area: 6 / 2 / 7 / 3; }
+    .div13 { grid-area: 7 / 1 / 8 / 2; }
+    .div14 { grid-area: 7 / 2 / 8 / 3; }
+    .div15 { grid-area: 8 / 1 / 9 / 2; }
+    .div16 { grid-area: 8 / 2 / 9 / 3; }
+    .div17 { grid-area: 9 / 1 / 10 / 2; }
+    .div18 { grid-area: 9 / 2 / 10 / 3; }
+    .div19 { grid-area: 10 / 1 / 11 / 2; }
+    .div20 { grid-area: 10 / 2 / 11 / 3; }
+    .div21 { grid-area: 11 / 1 / 12 / 2; }
+    .div22 { grid-area: 11 / 2 / 12 / 3; }
+    .div23 { grid-area: 12 / 1 / 13 / 2; }
+    .div24 { grid-area: 12 / 2 / 13 / 3; }
+    .div25 { grid-area: 13 / 1 / 14 / 2; }
+    .div26 { grid-area: 13 / 2 / 14 / 3; }
+    .div27 { grid-area: 14 / 1 / 15 / 2; }
+    .div28 { grid-area: 14 / 2 / 15 / 3; }
+    .div29 { grid-area: 15 / 1 / 16 / 2; }
+    .div30 { grid-area: 15 / 2 / 16 / 3; }
+
+    .div1 .bubbly-button, .div2 .bubbly-button, .div3 .bubbly-button, .div4 .bubbly-button, .div5 .bubbly-button{
+      animation-duration: 2s;
+    }
+    
+    .div6 .bubbly-button, .div7 .bubbly-button, .div8 .bubbly-button, .div9 .bubbly-button, .div10 .bubbly-button{
+      animation-duration: 2s;
+    }
+    
+    .div11 .bubbly-button, .div12 .bubbly-button, .div13 .bubbly-button, .div14 .bubbly-button, .div15 .bubbly-button{
+      animation-duration: 2s;
+    }
+    
+    .div16 .bubbly-button, .div17 .bubbly-button, .div18 .bubbly-button, .div19 .bubbly-button, .div20 .bubbly-button{
+      animation-duration: 2s;
+    }
+    
+    .div21 .bubbly-button, .div22 .bubbly-button, .div23 .bubbly-button, .div24 .bubbly-button, .div25 .bubbly-button{
+      animation-duration: 2s;
+    }
+    
+    .div26 .bubbly-button, .div27 .bubbly-button, .div28 .bubbly-button, .div29 .bubbly-button, .div30 .bubbly-button{
+      animation-duration: 2s;
+    }
 }
