@@ -6,11 +6,7 @@ const deck = document.getElementById("card-deck");
 let moves = 0;
 let counter = document.querySelector(".moves");
 
-const stars = document.querySelectorAll(".fa-star");
-
 let matchedCard = document.getElementsByClassName("match");
-
- let starsList = document.querySelectorAll(".stars li");
 
  let closeicon = document.querySelector(".close");
 
