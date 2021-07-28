@@ -1,18 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Ayan Dhara">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
-    <title>THA - 10</title>
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="status">
+
+    <div class="container">
+        <header>
+            <h1>Memory Game</h1>
+        </header>
+
+        <section class="score-panel">
+
+        	<span class="moves">0</span> Move(s)
+            <div class="restart" onclick=startGame()>
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <li class="card" type="discord">
+                <i class="fab fa-discord"></i>
+            </li>
+            <li class="card" type="facebook">
+                <i class="fab fa-facebook-f"></i>
+            </li>
+            <li class="card match" type="instagram">
+                <i class="fab fa-instagram"></i>
+            </li>
+            <li class="card" type="twitter" >
+                <i class="fab fa-twitter"></i>
+            </li>
+            <li class="card" type="pinterest">
+                <i class="fab fa-pinterest-p"></i>
+            </li>
+            <li class="card match" type="instagram">
+                <i class="fab fa-instagram"></i>
+            </li>
+            <li class="card" type="youtube">
+                <i class="fab fa-youtube"></i>
+            </li>
+            <li class="card" type="snapchat">
+                <i class="fab fa-snapchat-ghost"></i>
+            </li>
+            <li class="card" type="discord">
+                <i class="fab fa-discord"></i>
+            </li>
+            <li class="card" type="desktop">
+                <i class="fas fa-desktop"></i>
+            </li>
+            <li class="card" type="youtube">
+                <i class="fab fa-youtube"></i>
+            </li>
+            <li class="card" type="desktop">
+                <i class="fas fa-desktop"></i>
+            </li>
+            <li class="card open show" type="twitter">
+                <i class="fab fa-twitter"></i>
+            </li>
+            <li class="card" type="snapchat">
+                <i class="fab fa-snapchat-ghost"></i>
+            </li>
+            <li class="card" type="facebook">
+                <i class="fab fa-facebook-f"></i>
+            </li>
+            <li class="card" type="pinterest">
+                <i class="fab fa-pinterest-p"></i>
+            </li>
+        </ul>
+
+        <div id="popup1" class="overlay">
+                <button id="play-again"onclick="playAgain()">
+                    Play again 😄</a>
+                </button>
+            </div>
+        </div>
+
     </div>
-    <div class="cards">
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>

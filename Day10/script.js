@@ -1,97 +1,158 @@
-let cards = document.querySelector(".cards")
-let statusDiv = document.querySelector(".status")
+let card = document.getElementsByClassName("card");
+let cards = [...card];
 
-let noOfCards = 6 * 2
+const deck = document.getElementById("card-deck");
 
-const createEle = (tag, cls) => {
-    let ele = document.createElement("div")
-    ele.className = cls
-    return ele
+let moves = 0;
+let counter = document.querySelector(".moves");
+
+const stars = document.querySelectorAll(".fa-star");
+
+let matchedCard = document.getElementsByClassName("match");
+
+ let starsList = document.querySelectorAll(".stars li");
+
+ let closeicon = document.querySelector(".close");
+
+ let modal = document.getElementById("popup1")
+
+var openedCards = [];
+
+
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+};
+
+
+document.body.onload = startGame();
+
+
+function startGame(){
+ 
+    openedCards = [];
+
+    cards = shuffle(cards);
+    for (var i = 0; i < cards.length; i++){
+        deck.innerHTML = "";
+        [].forEach.call(cards, function(item) {
+            deck.appendChild(item);
+        });
+        cards[i].classList.remove("show", "open", "match", "disabled");
+    }
+    moves = 0;
+    counter.innerHTML = moves;
 }
 
-let images = [];
-for(let i = 0; i < noOfCards/2; i++){
-    images.push("img"+(i+1))
-    images.push("img"+(i+1))
-}
 
-const getRandImage = () => {
-    let i = Math.floor(Math.random() * images.length)
-    return images.splice(i, 1)[0]
-}
+var displayCard = function (){
+    this.classList.toggle("open");
+    this.classList.toggle("show");
+    this.classList.toggle("disabled");
+};
 
-let imageMap = {}
 
-for(let i = 0; i < noOfCards; i++){
-    imageMap["id" + (i+1)] = getRandImage()
-}
-
-const onGameFinished = () => {
-    setTimeout(()=>{
-        alert("You Finished the game")
-    }, 1000)
-}
-
-let flippedCard = null
-let totalPoints = 0
-let cardsShowing = false
-let cardFlipsCount = 0
-
-function flipCard(){
-    if(cardsShowing)
-        return;
-    if(this === flippedCard)
-        return;
-    if(this.cardMatched === true)
-        return
-    console.log(this.id)
-    this.classList.toggle("clicked")
-    cardFlipsCount++
-    if(flippedCard){
-        cardsShowing = true
-        if(imageMap[flippedCard.id] === imageMap[this.id]){
-            this.cardMatched = true
-            flippedCard.cardMatched = true
-            totalPoints++
-            flippedCard = null
-            cardsShowing = false
-        }
-        else{
-            setTimeout(() => {
-                this.classList.toggle("clicked")
-                flippedCard.classList.toggle("clicked")
-                flippedCard = null
-                cardsShowing = false
-            }, 1000)
+function cardOpen() {
+    openedCards.push(this);
+    var len = openedCards.length;
+    if(len === 2){
+        moveCounter();
+        if(openedCards[0].type === openedCards[1].type){
+            matched();
+        } else {
+            unmatched();
         }
     }
-    else
-        flippedCard = this
+};
 
-    if(noOfCards === totalPoints*2)
-        onGameFinished()
 
-    statusDiv.innerHTML = ""
-    statusDiv.append(`Total Moves ${cardFlipsCount}, Total Points ${totalPoints}`)
+function matched(){
+    openedCards[0].classList.add("match", "disabled");
+    openedCards[1].classList.add("match", "disabled");
+    openedCards[0].classList.remove("show", "open", "no-event");
+    openedCards[1].classList.remove("show", "open", "no-event");
+    openedCards = [];
 }
 
-for(let i = 0; i < noOfCards; i++){
-    let card = createEle("div", "card")
-    cards.append(card)
 
-    let innerCard = createEle("div", "card-inner")
-    card.append(innerCard)
-
-    innerCard.id = "id" + (i+1)
-    innerCard.addEventListener("click", flipCard)
-
-    let cardFront = createEle("div", "card-front")
-    innerCard.append(cardFront)
-    let cardBack = createEle("div", "card-back")
-    innerCard.append(cardBack)
-    cardBack.style.backgroundImage = "url(images/" + imageMap["id" + (i+1) ]+ ".svg)"
-        // `url(${imageMap[`id${i+1}`]}.svg)`
+function unmatched(){
+    openedCards[0].classList.add("unmatched");
+    openedCards[1].classList.add("unmatched");
+    disable();
+    setTimeout(function(){
+        openedCards[0].classList.remove("show", "open", "no-event","unmatched");
+        openedCards[1].classList.remove("show", "open", "no-event","unmatched");
+        enable();
+        openedCards = [];
+    },1100);
 }
-// cards.style.maxWidth = `${noOfCards * 191 / 4}px`
-console.log(images)
-statusDiv.append(`Total Moves ${cardFlipsCount}, Total Points ${totalPoints}`)
+
+
+function disable(){
+    Array.prototype.filter.call(cards, function(card){
+        card.classList.add('disabled');
+    });
+}
+
+
+function enable(){
+    Array.prototype.filter.call(cards, function(card){
+        card.classList.remove('disabled');
+        for(var i = 0; i < matchedCard.length; i++){
+            matchedCard[i].classList.add("disabled");
+        }
+    });
+}
+
+
+function moveCounter(){
+    moves++;
+    counter.innerHTML = moves;
+
+}
+
+
+function congratulations(){
+    if (matchedCard.length == 16){
+        modal.classList.add("show");
+
+        var starRating = document.querySelector(".stars").innerHTML;
+
+        document.getElementById("finalMove").innerHTML = moves;
+        document.getElementById("starRating").innerHTML = starRating;
+        document.getElementById("totalTime").innerHTML = finalTime;
+
+        closeModal();
+    };
+}
+
+
+function closeModal(){
+    closeicon.addEventListener("click", function(e){
+        modal.classList.remove("show");
+        startGame();
+    });
+}
+
+
+function playAgain(){
+    modal.classList.remove("show");
+    startGame();
+}
+
+
+for (var i = 0; i < cards.length; i++){
+    card = cards[i];
+    card.addEventListener("click", displayCard);
+    card.addEventListener("click", cardOpen);
+    card.addEventListener("click",congratulations);
+};
