@@ -1,40 +1,40 @@
 class QuizeApp{
     constructor(title){
+        
         this.setTitle(title)
 
         this.quiz = [{
-            question:"Who was the first President of the United States?",
-            options:["George Washington","Thomas Jefferson","Thomas Edison","I don't know"],
-            answer:3
-        },{
-            question:"I love ?",
-            options:["pakistan","sri-lanka","india","gaziyabad"],
+            question: 'What is the name of iron man\'s ai ?',
+            option: ['Ultron','Alexa','Jarvis','Vision'],
             answer:2
         },{
-            question:"what color is a apple?",
-            options:["Green","red","white","I don't know"],
+            question: 'How much infinity stones are there ?',
+            option: ['4','6','8','infinite'],
             answer:1
         },{
-            question:"abcdefasdsad sada sdasd sad  as?",
-            options:["asdasd","Tasdsa","asdsadan","I don't know"],
+            question: 'what is clint barton\'s(Hawkeye) wife\'s name?',
+            option: ['Laura Barton','Dora Barton','Natasha','Pepper Potts'],
             answer:0
         },{
-            question:"Who was the first President of the United States?",
-            options:["George Washington","Thomas Jefferson","Thomas Edison","I don't know"],
-            answer:3
-        }]
-
+            question: 'what is the name of thanos\'s planet',
+            option: ['Titan','Knowhere','Mirzapur','Nidavellir'],
+            answer:0
+        }
+    ];
+    
         this.currentQuestion = 0;
 
         this.optionSelected = false;
 
-        this.gameScore = 0;
+        this.positiveScore = 0;
+
+        this.negativeScore = 0;
     }
     setTitle(title){
         globalThis.document.querySelector("header h1").innerHTML = title
     }
     createOption(a, id, txt){
-        var div = globalThis.document.createElement("div")
+        var div = document.createElement("div")
         div.classList.add("option")
 
         var title = document.createElement("span")
@@ -56,7 +56,6 @@ class QuizeApp{
         if(this.currentQuestion+1 <= 4){
             this.removeQuestion()
             this.currentQuestion++;
-            // this.setQuestionCount()
             this.loadQuestion()
         }
     }
@@ -65,20 +64,21 @@ class QuizeApp{
         var btn = globalThis.document.querySelectorAll(".option .btn");
         btn.forEach(b => {
             b.addEventListener("click",() => {
-                quiz.checkAnswer(b);
+                quiz.selectAnswer(b);
             })
         })
+        var lock = document.querySelector('#lock');
+
+        lock.addEventListener('click',() => { this.checkAnswer(btn) })
     }
 
     loadQuestion(){
         var a =  globalThis.document.querySelector("main")
         globalThis.document.querySelector("#question").innerHTML = this.quiz[this.currentQuestion].question
-        this.quiz[this.currentQuestion].options.forEach((opt, index) => {
+        this.quiz[this.currentQuestion].option.forEach((opt, index) => {
             this.createOption(a, index, opt)
-            // console.log(opt, index)
         })
-        // this.setQuestion(this.quiz[this.currentQuestion].question)
-        globalThis.document.querySelector("#remaining").innerHTML = `Question ${this.currentQuestion+1} of 5`
+        globalThis.document.querySelector("#remaining").innerHTML = `Question ${this.currentQuestion+1} of 4`
         this.addEventListenerOnOptions()
     }
 
@@ -90,35 +90,51 @@ class QuizeApp{
     }
 
     checkAnswer(ans){
-        if(!this.optionSelected){
-            if(ans.id == this.quiz[this.currentQuestion].answer){
-                // alert("Yay");
-                ans.classList.toggle("correct")
-                this.gameScore++;
-            } else {
-                // alert("Boo");
-                ans.classList.toggle("wrong")
+        ans.forEach(b => {
+            if(b.classList.contains('selected')){
+                b.classList.remove('selected')
+                if(b.id == this.quiz[this.currentQuestion].answer){
+                    b.classList.toggle("correct")
+                    this.positiveScore++;
+                } else {
+                    b.classList.toggle("wrong")
+                    this.negativeScore++;
+                }
             }
-            this.optionSelected = true;
-        }
+         } )
+                document.querySelector('.wrong-answers').innerHTML = this.negativeScore;
+                document.querySelector('.right-answers').innerHTML = this.positiveScore;
     }
+    selectAnswer(newSelection){
+        var isSelected = Boolean(document.querySelector('.selected'))
+        console.log(isSelected);
+        if( !Boolean(document.querySelector('.correct')) && !Boolean(document.querySelector('.wrong'))){
+        if(isSelected){
+            document.querySelector('.selected').classList.remove('selected')
+            newSelection.classList.add('selected')
+        }
+        else{
+            newSelection.classList.add('selected')
+        }
+        }}
 }
 
 var quiz = new QuizeApp("Awesome Quiz")
 
 quiz.loadQuestion()
-// quiz.removeQuestion()
-// quiz.nextQuestion()
 
 let questionCounts = 1;
 document.querySelector("#next").addEventListener("click",()=>{
-    // alert("Loading Next Page")
-    // console.log(quiz.quiz.length, questionCounts)
     if(questionCounts == quiz.quiz.length){
-        alert("Thank You for playing!")
-        alert("Your Score is "+quiz.gameScore)
+        alert(`right answers: ${quiz.positiveScore}
+wrong answers: ${quiz.negativeScore}`)
         location.reload();
     }
     quiz.nextQuestion()
     questionCounts++;
 })
+
+
+
+
+

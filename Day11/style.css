@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
 
 body{
     margin: 0;
@@ -10,35 +15,54 @@ body{
     margin: 0 auto;
 }
 
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+    padding-right: 20px;
+}
+
+li{
+    font-weight: 500;
+    opacity: 0.8;
+}
+
 header{
-    padding-left: 3em;
+    padding-left: 2rem;
 }
 header h1{
-    font-size: 3em;
+    font-size: 3rem;
 }
 header span#question{
-    font-size: 1.7em;
+    font-size: 1.7rem;
+    opacity: 0.8;
 }
 main{
     margin: .5em 0;
-    padding-bottom: 1em;
-    border-bottom: 5px solid #30a37d;
+    padding-bottom: 1rem;
+    border-bottom: 5px solid #51b8b3;
 }
 main div.option{
     padding: 5px 2em;
     display: flex;
     flex-direction: column;
-}
+    align-items: flex-start;
+}   
 .btn{
-    padding: 1em;
-    width: 15%;
-    text-align: center;
     border-radius: 5px;
-    background: #30a37d;
+    font-size: 0.8rem;
+    background: #51b8b3;
     color: white;
     font-weight: bold;
-    user-select: none;
     cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px 20px;
 }
 .btn:hover{
     filter: opacity(0.8)
@@ -46,6 +70,7 @@ main div.option{
 div.option .qtitle{
     padding: 0.5em 0;
     font-size: 1.5em;
+    opacity: 0.6;
 }
 
 footer{
@@ -56,8 +81,12 @@ footer{
 #remaining , #rightPanel{
     padding: 1em;
     padding-left: 0 4em;
-    font-size: 1.3em;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#remaining{
+    opacity: 0.8;
 }
 
 #rightPanel span{
@@ -83,4 +112,8 @@ footer{
 
 .wrong{
     background: red;
+}
+
+.selected{
+    background: yellow;
 }
