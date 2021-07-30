@@ -2,6 +2,8 @@ var button = document.querySelector('button');
 
 var localData = localStorage.getItem('todos');
 
+if(localData != ''){
+
 var existingData = localData.split(',');
 
 existingData.forEach( x => {
@@ -19,7 +21,7 @@ existingData.forEach( x => {
     div.appendChild(i)
     document.querySelector('.todo-list').appendChild(div);
     markAsDone();
-} })
+} })}
 
 
 
