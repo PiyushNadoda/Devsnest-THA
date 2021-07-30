@@ -10,8 +10,7 @@ else{ localData = JSON.parse(localStorage.getItem('todos'));
 
 
 
-console.log(localData);
-    localData.forEach( x => {
+ localData.forEach( x => {
     if( x != ''){
     let div = document.createElement('div')
     div.classList.add('todo')
