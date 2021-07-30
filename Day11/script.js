@@ -107,7 +107,6 @@ class QuizeApp{
     }
     selectAnswer(newSelection){
         var isSelected = Boolean(document.querySelector('.selected'))
-        console.log(isSelected);
         if( !Boolean(document.querySelector('.correct')) && !Boolean(document.querySelector('.wrong'))){
         if(isSelected){
             document.querySelector('.selected').classList.remove('selected')
