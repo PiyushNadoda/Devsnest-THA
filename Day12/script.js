@@ -2,11 +2,10 @@ var button = document.querySelector('button');
 
 var localData = localStorage.getItem('todos');
 
-if(localData != ''){
+if(localData != ""){
 
-var existingData = localData.split(',');
-
-existingData.forEach( x => {
+    var existingData = localData.split(',');
+    existingData.forEach( x => {
     if( x != ''){
     let div = document.createElement('div')
     div.classList.add('todo')
