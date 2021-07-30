@@ -2,25 +2,25 @@ var button = document.querySelector('button');
 
 var localData = localStorage.getItem('todos');
 
-if(localData != ""){
+// if(localData != ""){
 
-    var existingData = localData.split(',');
-    existingData.forEach( x => {
-    if( x != ''){
-    let div = document.createElement('div')
-    div.classList.add('todo')
-    div.classList.add('todo-remaining')
-    let span = document.createElement('span')
-    span.classList.add('todo-text');
-    span.innerHTML = x;
-    let i = document.createElement('i')
-    i.classList.add('fas');
-    i.classList.add('fa-clipboard-check');
-    div.appendChild(span)
-    div.appendChild(i)
-    document.querySelector('.todo-list').appendChild(div);
-    markAsDone();
-} })}
+//     var existingData = localData.split(',');
+//     existingData.forEach( x => {
+//     if( x != ''){
+//     let div = document.createElement('div')
+//     div.classList.add('todo')
+//     div.classList.add('todo-remaining')
+//     let span = document.createElement('span')
+//     span.classList.add('todo-text');
+//     span.innerHTML = x;
+//     let i = document.createElement('i')
+//     i.classList.add('fas');
+//     i.classList.add('fa-clipboard-check');
+//     div.appendChild(span)
+//     div.appendChild(i)
+//     document.querySelector('.todo-list').appendChild(div);
+//     markAsDone();
+// } })}
 
 
 
