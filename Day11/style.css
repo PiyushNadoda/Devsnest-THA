@@ -115,5 +115,6 @@ footer{
 }
 
 .selected{
-    background: yellow;
+    background: orange;
+    color: rgb(77, 72, 72);
 }
