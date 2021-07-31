@@ -5,4 +5,4 @@ async function randomQuote() {
     document.querySelector('.quote').innerHTML = data.content;
     document.querySelector('cite').innerHTML = data.author;
   }
-  randomQuote()
+randomQuote()
