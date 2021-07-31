@@ -1,0 +1,30 @@
+body,
+main::before {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/tree.jpg) 0 / cover fixed;
+}
+
+main {
+  margin: 100px auto;
+  position: relative;
+  padding: 10px 5px;
+  background: hsla(0, 0%, 100%, .3);
+  font-size: 20px;
+  font-family: 'Lora', serif;
+  line-height: 1.5;
+  border-radius: 10px;
+  width: 60%;
+  box-shadow: 5px 3px 30px black;
+  overflow: hidden;
+}
+
+main::before {
+  content: '';
+  margin: -35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: blur(20px);
+  z-index: -1;
+}
