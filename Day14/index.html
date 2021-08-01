@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pending THA</title>
+    <link rel="stylesheet" href="style.css">
+    <title>THA 14</title>
 </head>
 <body>
-    <h1>This THA will be uploaded soon!!!</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/bCrz03-OJtY?start=10&autoplay=true" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p class="text"> No activity </p>
+    <div class="btn-container">
+        <button class="button-1" onclick="buttonOneClicked();" > Button 1 </button>
+        <button class="button-2" onclick="buttonTwoClicked();" > Button 2 </button>
+        <button class="button-3" onclick="buttonThreeClicked();" > Button 3 </button>
+    </div>
+    <input type="text" class="input-name" placeholder="Name" onfocus="inputName();" onblur="noActivity();" > 
+    <input type="text" class="input-email" placeholder="Email" onfocus="inputEmail()" onblur="noActivity();" >
+
+
+    <script src="script.js"></script>
 </body>
 </html>
