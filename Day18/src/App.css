@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+.app{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chess-board{
+    height: 240px;
+    width: 240px;
+    border: 20px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1px;
+}
+
+.black-box{
+    height: 30px;
+    width: 30px;
+    background-color: #000;
+}
+
+.white-box{
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+}
+
+.raw{
+    display: flex;
+    flex-direction:row;
+}
+
+.rraw{
+    display: flex;
+    flex-direction: row-reverse;
+}

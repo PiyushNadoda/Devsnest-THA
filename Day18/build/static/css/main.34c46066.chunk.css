@@ -1,0 +1,2 @@
+*{margin:0;padding:0;outline:0}.app{width:100vw;height:100vh;display:flex;justify-content:center;align-items:center}.chess-board{height:240px;width:240px;border:20px solid #000;display:flex;flex-wrap:wrap;padding:1px}.black-box{background-color:#000}.black-box,.white-box{height:30px;width:30px}.white-box{background-color:#fff}.raw{flex-direction:row}.raw,.rraw{display:flex}.rraw{flex-direction:row-reverse}
+/*# sourceMappingURL=main.34c46066.chunk.css.map */
