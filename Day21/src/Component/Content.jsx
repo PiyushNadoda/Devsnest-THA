@@ -84,7 +84,7 @@ function Content(){
                 <input className="input-calory" type="number" onChange={caloryValue} placeholder="calory" required/>
                 </div>
                 <button onClick={addItem} className="add-item"> Add item </button>
-                <button onClick={changeItem} className="change-item"> change item </button>
+                <button onClick={changeItem} className="change-item"> Save </button>
             </form>
             <h1 className="heading"> List </h1>
             <div className="list-container">
