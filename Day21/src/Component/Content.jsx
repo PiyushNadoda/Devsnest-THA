@@ -48,8 +48,12 @@ function Content(){
 
         // deleting item
         function deleteItem(){
+            if(document.querySelector('.change-item').style.display === "none"){
             let itemSetter = item.filter((item, i) => i !== index);
-            setItem(itemSetter);
+            setItem(itemSetter)}
+            else{
+                alert('can\'t delete while editing');
+            }
         }
 
         // triggering edit item to get change item button
