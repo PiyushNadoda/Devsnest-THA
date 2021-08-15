@@ -46,10 +46,10 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
             <About isLoggedIn={isLoggedIn}/>
           </Route>
           <Route path="/profile">
-            <Profile />
+            <Profile isLoggedIn={isLoggedIn}/>
           </Route>
           <Route path="/dashboard">
-            <Dashboard/>
+            <Dashboard isLoggedIn={isLoggedIn}/>
           </Route>
           <Route path="/">
             <Home isLoggedIn={isLoggedIn}/>
@@ -74,10 +74,10 @@ function About({isLoggedIn}) {
   </>)
 }
 
-function Profile() {
-  return <h2>Profile</h2>;
+function Profile({isLoggedIn}) {
+  return (<>{isLoggedIn? <h2>Profile</h2> : <h2>Please Login to get access</h2>}</>)
 }
 
-function Dashboard() {
-  return <h2>Dashboard</h2>;
+function Dashboard({isLoggedIn}) {
+  return (<>{isLoggedIn? <h2>Dashboard</h2> : <h2>Please Login to get access</h2>}</>)
 }
