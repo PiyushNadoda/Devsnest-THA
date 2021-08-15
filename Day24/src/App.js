@@ -61,7 +61,7 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
 }
 
 function Home({isLoggedIn}) {
-  return (<><h2>Home</h2>;
+  return (<><h2>Home</h2>
   {isLoggedIn? "" : <p> please login to get access to your profile and dashboard </p>}
   </>)
 }
@@ -69,7 +69,7 @@ function Home({isLoggedIn}) {
 
 function About({isLoggedIn}) {
   return ( <>
-  <h2>About</h2>;
+  <h2>About</h2>
   {isLoggedIn? "" : <p> please login to get access to your profile and dashboard </p>}
   </>)
 }
