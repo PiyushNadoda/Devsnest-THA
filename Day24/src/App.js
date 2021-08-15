@@ -33,7 +33,6 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
               if(isLoggedIn){
                 setIsLoggedIn(!isLoggedIn);
                 event.target.innerHTML = 'Login';
-                window.location.href =  "/";
               } else{
                 setIsLoggedIn(!isLoggedIn);
                 event.target.innerHTML = 'Logout';
