@@ -45,7 +45,7 @@ function Content(){
 
     // item card
     function Detail({food, calory, index}){
-
+    document.querySelector('.change-item').style.display = "none";
         // deleting item
         function deleteItem(){
             if(document.querySelector('.change-item').style.display === "none"){
