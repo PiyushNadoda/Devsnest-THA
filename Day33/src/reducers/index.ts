@@ -5,6 +5,6 @@ const rootReducer = combineReducers({
     todos: todoReduce,
 })
 
-export type reducerType = ReturnType<typeof rootReducer>;
+export type storeType = ReturnType<typeof rootReducer>;
 
 export default rootReducer;

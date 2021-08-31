@@ -1,20 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClipboardCheck, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
-import { RemoveTodo } from '../actions/index';
+import { RemoveTodo } from '../actions';
 import { useDispatch } from 'react-redux';
-import React from 'react';
 
-interface prop {
+interface todo{
     index: number,
     todo: string
 }
 
-const Todo = ({index, todo} : prop) => {
+const Todo = ({index, todo} : todo) => {
 
     const dispatch = useDispatch();
     const [icon, setIcon] = useState(faClipboardCheck)
-    const [classes, setClasses] = useState<string>("todo todo-remaining");
+    const [classes, setClasses] = useState("todo todo-remaining");
 
     return(
         <>

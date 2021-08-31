@@ -1,22 +1,20 @@
-interface actionAdd{
-    type : string,
+interface addTodo{
+    type: string,
     payload: string
 }
 
-interface actionRemove{
+interface removeTodo{
     type: string,
     payload: number
 }
 
-type action = actionAdd | actionRemove;
+type todo = addTodo | removeTodo;
 
-type filterr = () => boolean;
-
-const todoReduce= (state :string[] = [], action : action) => {
+const todoReduce= (state :string[] = [], action : todo) => {
     if(action.type === "ADD_TODO"){
-        return  [...state,action.payload]
+        return [...state,action.payload]
     } else if ( action.type === "REMOVE_TODO" ){
-        return  state.filter((_ : string, index : number) : boolean => index != action.payload)
+        return state.filter((item, index) => index !== action.payload)
     }
     return state;
 }

@@ -1,7 +1,6 @@
 import {AddTodo} from "../actions/index";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import React from "react";
 
 const Add = () => {
     const dispatch = useDispatch();
