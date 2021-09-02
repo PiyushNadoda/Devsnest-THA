@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    body{
+    width: 99%;
+    background-color: rgb(250, 250, 250);
+}
+
+.app{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
