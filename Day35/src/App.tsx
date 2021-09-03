@@ -8,7 +8,7 @@ import Thread from './Componenst/thread/thread';
 function App() {
   const dispatch = useDispatch();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() : any =>{ dispatch(fetchProfiles());}, [])
+  useEffect(() =>{ dispatch(fetchProfiles());}, [])
   return (<>
       <div className="app">
         <NavBar/>

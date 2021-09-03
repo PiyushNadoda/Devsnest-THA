@@ -1,3 +1,26 @@
+.story{
+     
+
+    position: relative;
+
+    .fa-chevron-circle-left{
+        position: absolute;
+        left: 10px;
+        bottom: 50px;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .fa-chevron-circle-right{
+        position: absolute;
+        right: 10px;
+        bottom: 50px;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+
+
 .story-sction{
     height: auto;
     width: 100%;
@@ -13,7 +36,6 @@
     &::-webkit-scrollbar{
         display: none;
     }
-
     .story-card{
         max-width: 65px;
         margin: 0px 7px;
@@ -38,4 +60,4 @@
         }
 
 }
-}
+}}

@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchProfiles } from '../../../actions';
 import { rootReducerType } from '../../../reducers';
+import { data } from '../../../actions';
+
 const Menu = () => {
     const dispatch = useDispatch();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -15,8 +17,8 @@ const Menu = () => {
             <div className="menu-top">
                 <img className="user-img" src="https://picsum.photos/100" alt="" />
                 <div className="user-name">
-                <span><strong>user name</strong></span>
-                <span>user name</span>
+                <span><strong>Instagram user</strong></span>
+                <span>Instagramer</span>
                 </div>
             </div>
             <div className="menu-mid">
@@ -24,14 +26,14 @@ const Menu = () => {
             </div>
             <div className="menu-bottom">
                 {
-                    data.map((user : any, index: number) => {
+                    data.map((user : data, index: number) => {
                         return(
                         
                             <div className="sug-card" key={index}>
 
                         <div className="sug-user" key={index}>
                         <img className="sug-img" src={user.profilePicture} alt="" />
-                        <span> {user.username} </span>
+                        <span className="sug-name"> {user.username} </span>
                         </div>
                         <span className="follow">Follow</span>
                         </div>

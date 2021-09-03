@@ -1,11 +1,8 @@
-// import { useSelector } from 'react-redux'
-// import { rootReducerType } from '../../../reducers';
 import { useState } from 'react'
 import './posts.scss'
 import StorySection from './StorySection/StorySection'
 
 const Posts = () => {
-    // const user = useSelector( (state : rootReducerType) => state.data);
     const [isLiked, setIsLiked] = useState<boolean>(false);
     const [isBookmarked, setIsBookmarked] = useState<boolean>(false);
     return(
@@ -20,7 +17,7 @@ const Posts = () => {
                             <div className="top">
                             <div className="top-left">
                                 <img className="pfp" src="https://picsum.photos/700" alt=""/>
-                                <span className="username">Indian stanup</span>
+                                <span className="username">Instagram user</span>
                             </div>
                             <div className="top-right">
                                 <i className="fas fa-ellipsis-v"></i>
